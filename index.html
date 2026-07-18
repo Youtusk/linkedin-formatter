@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formateur de Texte LinkedIn - Gras, Italique, Souligné</title>
+    <meta name="description" content="Outil 100% gratuit pour formater vos posts LinkedIn. Ajoutez du gras, de l'italique et du souligné pour faire ressortir vos publications professionnelles.">
+    <meta name="keywords" content="formateur linkedin, texte gras linkedin, ecrire en gras sur linkedin, italique linkedin, unicode linkedin, post linkedin parfait">
+    <meta property="og:title" content="Formateur de Texte LinkedIn Pro">
+    <meta property="og:description" content="Créez des posts LinkedIn qui attirent l'œil avec du texte en gras et italique. Gratuit et instantané.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/lucide@latest/css/lucide.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="empire-nav">
+        <span>Découvrir aussi :</span>
+        <a href="../yt-thumbnail-grabber/index.html" class="empire-link">Extracteur Pro YouTube</a>
+    </nav>
+
+    <div class="background-effects">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Formatteur Pro <span>LinkedIn</span></h1>
+            <p>Rédigez. Formatez. Impressionnez.</p>
+        </header>
+
+        <div class="editor-panel">
+            <div class="toolbar">
+                <button id="btn-bold" class="tool-btn" title="Gras (Ctrl+B)">
+                    <i data-lucide="bold"></i>
+                </button>
+                <button id="btn-italic" class="tool-btn" title="Italique (Ctrl+I)">
+                    <i data-lucide="italic"></i>
+                </button>
+                <button id="btn-underline" class="tool-btn" title="Souligné (Ctrl+U)">
+                    <i data-lucide="underline"></i>
+                </button>
+                <button id="btn-strikethrough" class="tool-btn" title="Barré">
+                    <i data-lucide="strikethrough"></i>
+                </button>
+                <div class="divider"></div>
+                <button id="btn-clear" class="tool-btn danger" title="Effacer tout">
+                    <i data-lucide="trash-2"></i>
+                </button>
+            </div>
+
+            <textarea id="editor" placeholder="Commencez à taper votre post parfait ici... Sélectionnez du texte et utilisez les boutons pour le formater."></textarea>
+            
+            <div class="status-bar">
+                <div class="counters">
+                    <span id="char-count">0 caractères</span>
+                    <span class="dot">•</span>
+                    <span id="word-count">0 mots</span>
+                </div>
+                <div class="limits" id="limit-warning">
+                    Idéal pour LinkedIn (Max 3000)
+                </div>
+            </div>
+        </div>
+
+        <button id="btn-copy" class="action-btn">
+            <i data-lucide="copy"></i>
+            <span>Copier pour LinkedIn</span>
+        </button>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
