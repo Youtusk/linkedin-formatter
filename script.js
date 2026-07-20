@@ -96,20 +96,20 @@ document.addEventListener('DOMContentLoaded', () => {
         // Compter les mots (séparés par des espaces)
         const words = text.trim().split(/\s+/).filter(word => word.length > 0).length;
 
-        charCount.textContent = `${length} caractères`;
-        wordCount.textContent = `${words} mots`;
+        charCount.textContent = `${length} characters`;
+        wordCount.textContent = `${words} words`;
 
         // LinkedIn limite typiquement à 3000 caractères
         if (length > 3000) {
-            limitWarning.textContent = "Limite LinkedIn dépassée !";
+            limitWarning.textContent = "LinkedIn limit exceeded!";
             limitWarning.className = "limits danger";
             charCount.style.color = "var(--danger)";
         } else if (length > 2800) {
-            limitWarning.textContent = "Attention, vous approchez de la limite";
+            limitWarning.textContent = "Warning, approaching limit";
             limitWarning.className = "limits warning";
             charCount.style.color = "#f59e0b";
         } else {
-            limitWarning.textContent = "Idéal pour LinkedIn (Max 3000)";
+            limitWarning.textContent = "Ideal for LinkedIn (Max 3000)";
             limitWarning.className = "limits";
             charCount.style.color = "var(--text-muted)";
         }
@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btnStrikethrough.addEventListener('click', () => formatSelection('strikethrough'));
     
     btnClear.addEventListener('click', () => {
-        if (editor.value.length > 0 && confirm('Voulez-vous vraiment tout effacer ?')) {
+        if (editor.value.length > 0 && confirm('Are you sure you want to clear everything?')) {
             editor.value = '';
             updateCounters();
             editor.focus();
@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const successAnim = () => {
             const originalHtml = btnCopy.innerHTML;
-            btnCopy.innerHTML = '<i data-lucide="check"></i><span>Copié avec succès !</span>';
+            btnCopy.innerHTML = '<i data-lucide="check"></i><span>Copied successfully!</span>';
             btnCopy.classList.add('success');
             lucide.createIcons();
 
@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 successAnim();
             } catch (err) {
                 console.error('Erreur de copie:', err);
-                alert("Copie auto bloquée par le navigateur. Veuillez utiliser Ctrl+C.");
+                alert("Auto-copy blocked by browser. Please use Ctrl+C.");
             }
             window.getSelection().removeAllRanges();
             editor.focus();
